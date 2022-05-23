@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 // x = 100;
 // console.log(x);
@@ -133,30 +133,91 @@
 
 // mass / height ** 2
 
-const bmiCalc = function (height, mass) {
-  return mass / height ** 2;
-};
+// const bmiCalc = function (height, mass) {
+//   return mass / height ** 2;
+// };
 
-const Jone = {
-  fName: "jhone",
-  Lname: "smith",
-  Height: 1.95,
-  mass: 92,
+// const Jone = {
+//   fName: "jhone",
+//   Lname: "smith",
+//   Height: 1.95,
+//   mass: 92,
 
-  bmi: bmiCalc(this.height, this.mass),
-};
+//   bmi: bmiCalc(this.height, this.mass),
+// };
 
-const mark = {
-  fName: "mark",
-  Lname: "miller",
-  Height: 1.96,
-  mass: 78,
-  calcBmi: function () {
-    this.bmi = this.mass / this.Height ** 2;
-  },
-};
-mark.calcBmi();
-console.log(mark.bmi);
+// const mark = {
+//   fName: "mark",
+//   Lname: "miller",
+//   Height: 1.96,
+//   mass: 78,
+//   calcBmi: function () {
+//     this.bmi = this.mass / this.Height ** 2;
+//   },
+// };
+// mark.calcBmi();
+// console.log(mark.bmi);
 
-// Jone.calcBmi();
-console.log(Jone.bmi(...));
+// // Jone.calcBmi();
+// console.log(Jone.bmi(...));
+// loop
+
+// const arr = ["a", 1, "c", "d", "e", 4, 55, "saadcdscs"];
+
+// // console only string
+// console.log(typeof typeof arr[1]);
+
+// // for (let i = 0; i < arr.length; i++) {
+// //   if (typeof arr[i] !== "string") continue;
+
+// //   console.log(arr[i]);
+// // }
+
+// loop inside aloop
+
+// const arr = ["a", 1, "c", "d", "e", [4, 55, "saadcdscs"]];
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i].length > 1) {
+//     for (let l = 0; l < arr[i].length; l++) {
+//       console.log(arr[i][l]);
+//     }
+//   }
+
+//   // console.log(arr[i]);
+// }
+
+// while loop
+// let i = 0;
+// while (i < 1000) {
+//   console.log(`hello ${i}`);
+//   i++;
+//   // if (i > 100) break;
+// }
+
+// let dice = Math.trunc(Math.random() * 6 + 1);
+// let dice = Math.trunc(Math.random() * 6) + 1;
+
+// while (dice !== 6) {
+//   console.log(`You rolled a ${dice}`);
+//   dice = Math.trunc(Math.random() * 6) + 1;
+//   if (dice === 6) console.log("Loop is about to end...");
+// }
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+const calcTip = (bill) =>
+  bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+const tips = [];
+const total = [];
+
+for (let i = 0; i < bills.length; i++) {
+  const tip = calcTip(bills[i]);
+  tips.push(tip);
+  total.push(bills[i] + tip);
+}
+
+console.log(bills, tips, total);
+console.log();
+
+console.log('hell');
